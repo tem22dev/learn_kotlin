@@ -8,23 +8,36 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
     <Button
         android:id="@+id/btnShowToast"
-        android:layout_width="wrap_content"
+        android:layout_width="177dp"
         android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginEnd="180dp"
-        android:layout_marginBottom="601dp"
-        android:text="Show Toast" />
+        android:layout_marginStart="101dp"
+        android:layout_marginEnd="132dp"
+        android:layout_marginBottom="641dp"
+        android:text="@string/show_toast" />
+
+    <EditText
+        android:id="@+id/etUserMessage"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="233dp"
+        android:autofillHints="text"
+        android:ems="10"
+        android:hint="@string/message"
+        android:inputType="text"
+        android:padding="12dp"
+        android:text="@string/message" />
+
+    <Button
+        android:id="@+id/btnSendMsgNestActivity"
+        android:text="@string/button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true" />
 
 </RelativeLayout>
