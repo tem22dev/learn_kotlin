@@ -19,8 +19,9 @@ class SecondActivity: AppCompatActivity() {
             insets
         }
 
-        val bundle: Bundle? = intent.extras
-        val msg = bundle!!.getString("user_message")
+//        val bundle: Bundle? = intent.extras
+//        val msg = bundle!!.getString("user_message")
+        val msg = intent.getStringExtra("user_message")
         Toast.makeText(this, msg, Toast.LENGTH_SHORT).show()
 
         val txtUserMessage = findViewById<TextView>(R.id.txtUserMessage)

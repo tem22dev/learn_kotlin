@@ -24,6 +24,7 @@ class MainActivity : AppCompatActivity() {
 
         val btnShowToast = findViewById<Button>(R.id.btnShowToast)
         val btnSendMsgNestActivity = findViewById<Button>(R.id.btnSendMsgNestActivity)
+        val btnShareToOtherApp = findViewById<Button>(R.id.btnShareToOtherApp)
 
         val etUserMessage = findViewById<EditText>(R.id.etUserMessage)
 
@@ -38,6 +39,16 @@ class MainActivity : AppCompatActivity() {
             val intent = Intent(this, SecondActivity::class.java)
             intent.putExtra("user_message", message)
             startActivity(intent)
+        }
+        btnShareToOtherApp.setOnClickListener {
+            val message: String = etUserMessage.text.toString()
+
+            val intent = Intent()
+            intent.action = Intent.ACTION_SEND
+            intent.putExtra(Intent.EXTRA_TEXT, message)
+            intent.type = "text/plain"
+
+            startActivity(Intent.createChooser(intent, "Share to: "))
         }
     }
 }
