@@ -11,6 +11,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.example.myapplication.R
+import com.example.myapplication.showToast
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -32,7 +33,7 @@ class MainActivity : AppCompatActivity() {
 
         btnShowToast.setOnClickListener {
             Log.i("MainActivity", "Button was clicked !")
-            Toast.makeText(this, "Button was click !", Toast.LENGTH_SHORT).show()
+            showToast("Button was click !")
         }
         btnSendMsgNestActivity.setOnClickListener {
             val message: String = etUserMessage.text.toString()
