@@ -10,10 +10,16 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import com.example.myapplication.AppConstants
 import com.example.myapplication.R
 import com.example.myapplication.showToast
 
 class MainActivity : AppCompatActivity() {
+
+    companion object {
+        val TAG: String = MainActivity::class.java.simpleName
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge() //Loại bỏ thanh trạng thái và thanh điều hướng khỏi vùng layout.
@@ -32,7 +38,7 @@ class MainActivity : AppCompatActivity() {
         val etUserMessage = findViewById<EditText>(R.id.etUserMessage)
 
         btnShowToast.setOnClickListener {
-            Log.i("MainActivity", "Button was clicked !")
+            Log.i(TAG, "Button was clicked !")
             showToast("Button was click !")
         }
         btnSendMsgNestActivity.setOnClickListener {
@@ -40,7 +46,7 @@ class MainActivity : AppCompatActivity() {
 //            Toast.makeText(this, message, Toast.LENGTH_SHORT).show()
 
             val intent = Intent(this, SecondActivity::class.java)
-            intent.putExtra("user_message", message)
+            intent.putExtra(AppConstants.USER_MSG_KEY, message)
             startActivity(intent)
         }
         btnShareToOtherApp.setOnClickListener {

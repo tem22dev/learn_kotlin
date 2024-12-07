@@ -11,6 +11,11 @@ import com.example.myapplication.R
 import com.example.myapplication.showToast
 
 class SecondActivity: AppCompatActivity() {
+
+    companion object {
+        val TAG: String = SecondActivity::class.java.simpleName
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge() //Loại bỏ thanh trạng thái và thanh điều hướng khỏi vùng layout.

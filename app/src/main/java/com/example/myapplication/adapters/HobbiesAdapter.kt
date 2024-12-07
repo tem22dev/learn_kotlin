@@ -11,9 +11,14 @@ import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
 import com.example.myapplication.models.Hobby
 import com.example.myapplication.R
+import com.example.myapplication.activities.SecondActivity
 import com.example.myapplication.showToast
 
 class HobbiesAdapter(val context: Context, private val hobbies: List<Hobby>): RecyclerView.Adapter<HobbiesAdapter.MyViewHolder>() {
+
+    companion object {
+        val TAG: String = HobbiesAdapter::class.java.simpleName
+    }
 
     inner class MyViewHolder(itemView: View): RecyclerView.ViewHolder(itemView) {
 

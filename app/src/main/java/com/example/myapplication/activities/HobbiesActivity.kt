@@ -12,6 +12,11 @@ import com.example.myapplication.R
 import com.example.myapplication.models.Supplier
 
 class HobbiesActivity: AppCompatActivity() {
+
+    companion object {
+        val TAG: String = HobbiesActivity::class.java.simpleName
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge() //Loại bỏ thanh trạng thái và thanh điều hướng khỏi vùng layout.
