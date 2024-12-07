@@ -44,7 +44,14 @@
         android:id="@+id/btnShareToOtherApp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="420dp"
+        android:layout_marginTop="440dp"
         android:text="Share to other app" />
+
+    <Button
+        android:id="@+id/btnRecyclerViewDemo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="520dp"
+        android:text="Recycler View Demo" />
 
 </RelativeLayout>

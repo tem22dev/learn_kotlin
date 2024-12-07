@@ -25,6 +25,7 @@ class MainActivity : AppCompatActivity() {
         val btnShowToast = findViewById<Button>(R.id.btnShowToast)
         val btnSendMsgNestActivity = findViewById<Button>(R.id.btnSendMsgNestActivity)
         val btnShareToOtherApp = findViewById<Button>(R.id.btnShareToOtherApp)
+        val btnRecyclerViewDemo = findViewById<Button>(R.id.btnRecyclerViewDemo)
 
         val etUserMessage = findViewById<EditText>(R.id.etUserMessage)
 
@@ -49,6 +50,10 @@ class MainActivity : AppCompatActivity() {
             intent.type = "text/plain"
 
             startActivity(Intent.createChooser(intent, "Share to: "))
+        }
+        btnRecyclerViewDemo.setOnClickListener {
+            val intent = Intent(this, HobbiesActivity::class.java)
+            startActivity(intent)
         }
     }
 }
